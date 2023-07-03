@@ -53,11 +53,15 @@ def full_season_reports(catcher):
     total_count_left = len(pitches_in_left)
     total_count_right = len(pitches_in_right)
 
-    strike_total = pitches_in_left[pitches_in_left['PitchCall'] == 'StrikeCalled'].append(
-        pitches_in_right[pitches_in_right['PitchCall'] == 'StrikeCalled'])
+    strike_total = pd.concat([
+        pitches_in_left[pitches_in_left['PitchCall'] == 'StrikeCalled'],
+        pitches_in_right[pitches_in_right['PitchCall'] == 'StrikeCalled']
+    ])
 
-    ball_total = pitches_in_left[pitches_in_left['PitchCall'] == 'BallCalled'].append(
-        pitches_in_right[pitches_in_right['PitchCall'] == 'BallCalled'])
+    ball_total = pd.concat([
+        pitches_in_left[pitches_in_left['PitchCall'] == 'BallCalled'],
+        pitches_in_right[pitches_in_right['PitchCall'] == 'BallCalled']
+    ])
 
     if total_count_left == 0 or total_count_right == 0:
         print("Not enough data")
@@ -140,11 +144,15 @@ def single_game_report(catcher, game_date):
     total_count_left = len(pitches_in_left)
     total_count_right = len(pitches_in_right)
 
-    strike_total = pitches_in_left[pitches_in_left['PitchCall'] == 'StrikeCalled'].append(
-        pitches_in_right[pitches_in_right['PitchCall'] == 'StrikeCalled'])
+    strike_total = pd.concat([
+        pitches_in_left[pitches_in_left['PitchCall'] == 'StrikeCalled'],
+        pitches_in_right[pitches_in_right['PitchCall'] == 'StrikeCalled']
+    ])
 
-    ball_total = pitches_in_left[pitches_in_left['PitchCall'] == 'BallCalled'].append(
-        pitches_in_right[pitches_in_right['PitchCall'] == 'BallCalled'])
+    ball_total = pd.concat([
+        pitches_in_left[pitches_in_left['PitchCall'] == 'BallCalled'],
+        pitches_in_right[pitches_in_right['PitchCall'] == 'BallCalled']
+    ])
 
     if total_count_left == 0 or total_count_right == 0:
         print("Not enough data")
