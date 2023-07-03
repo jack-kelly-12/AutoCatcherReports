@@ -1,0 +1,8 @@
+1. Click the green "Code" button in the top right
+2. In the dropdown menu, click "Download ZIP"
+3. Remember where you downloaded the ZIP folder on your computer, then go there, click on the ZIP folder and in the top right select "Extract"
+4. Extract those files wherever you want, then go to there on your computer
+5. Do the same thing with the "master_csv.zip" file, but place it in the same folder as the "GenerateCatcherReports.py" file
+6. Right click the "GenerateCatcherReports.py" file and select "Open in Terminal"
+7. In terminal, type "python GenerateCatcherReports.py" (remove the "")
+8. The program should run from there, follow the directions it gives you
